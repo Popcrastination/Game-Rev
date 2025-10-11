@@ -15,7 +15,7 @@ body {
 header {
     position: fixed;
     overflow: hidden;
-
+    z-index: 2;
 }
 
 header img {
@@ -47,7 +47,7 @@ header h1 {
     background-color: #19183b;
     border-bottom: 7px solid #7bad9f;
     padding-bottom: 35px;
-    z-index: -1;
+    z-index: 1;
 }
 
 #navbar ul {
@@ -88,20 +88,31 @@ header h1 {
     font-weight: 900;
 }
 
-
-.highlight-week figure {
-    margin-bottom: 1rem;
-    position: relative;
-    
+.title-week {
+    text-align: center;
+    font-size: 100px;
+    font-family: "Enriqueta", Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.highlight-week figcaption {
-    padding: 10px;
+.fig-highlight {
+    position: relative;
+    max-width: 900px;
+    margin-bottom: 0;
+}
+
+.highlight-week figure img {
+    height: auto;
+    width: 100%;
+}
+
+.fig-caption {
+    padding: 20px 0;
     line-height: 1.5;
     position: absolute;
     bottom: 0;
-    right: 0;
-    text-align: right;
+    width: 100%;
+    text-align: center;
     color: #fff;
     opacity: 0.7;
+    background-color: rgba(120, 0, 0, 0.5);
 }
