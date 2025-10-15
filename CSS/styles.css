@@ -3,6 +3,9 @@
 }
 
 /* Desktop View */
+html {
+    background-color: #19183b;
+}
 
 body {
     background-color: #e7f2ef;
@@ -50,6 +53,10 @@ header h1 {
     z-index: 1;
 }
 
+.dropbtn {
+    display: none;
+}
+
 #navbar ul {
     list-style-type: none;
 }
@@ -66,11 +73,43 @@ header h1 {
     color: #7bad9f;
 }
 
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #19183B;
+    color: white;
+    overflow: hidden;
+    margin: 12% 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.owner {
+    font-size: 1.5em;
+    margin-left: 1%;
+}
+
+.contacts {
+    font-size: 2.0em;
+    align-items: center;
+    margin-right: 5%;
+    display: inline-flex;
+}
+
+.contacts i {
+    right: 0;
+    margin: 0 4%;
+    display: block;
+    float: right;
+    
+}
+
 /* Main */
 
 .home-main {
     margin-top: 200px;
-    padding: 0;
+    padding: 0%;
 }
 
 /* Highlight of the week */
@@ -85,7 +124,7 @@ header h1 {
     width: 70%;
     padding: 0;
     text-align: center;
-    font-size: 100px;
+    font-size: 6.25em;
     border-radius: 40px;
     text-shadow: 5px 5px 10px black;
     -webkit-text-stroke-width: 1px;
@@ -108,7 +147,7 @@ header h1 {
 .fig-highlight {
     position: relative;
     max-width: 600px;
-    height: 800px;
+    height: 100%;
     margin-bottom: 0;
     margin-right: 100px;
     margin-left: 100px;
@@ -135,12 +174,12 @@ header h1 {
 }
 
 .highlight-week p {
-    margin: 10px 0 0 0;
+    margin: 10px 2%;
     padding: 0;
-    font-size: 45px;
+    font-size: 2.8em;
     font-family: "Enriqueta", Verdana, Geneva, Tahoma, sans-serif;
-    margin-right: 100px;
     padding-bottom: 10%;
+    text-align: justify;
 }
 
 /* Reviews of the Day */
@@ -224,4 +263,484 @@ header h1 {
     color: #7BAD9F;
     font-weight: 900;
     padding: 50px 0;
+}
+
+
+/* Post Page */
+.search {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.text-search {
+    font-family: "Enriqueta", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: inherit;
+    background-color: #7BAD9F;
+    border: none;
+    color: #E7F2EF;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 60%;
+    transition: all ease-in-out .5s;
+    margin-right: -2.5em;
+}
+
+.text-search::placeholder {
+    color: #E7F2EF;
+}
+
+.text-search:hover, .text-search:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.text-search:focus {
+    font-weight: 100;
+    color: black;
+}
+
+.text-search:focus, .button-search {
+    background-color: #f0eeee;
+}
+
+.button-search {
+    border: none;
+    margin-top: .1em;
+    background-color: #7BAD9F;
+}
+
+.button-submit {
+    background-color: transparent;
+}
+
+.icon-search {
+    height: 1.5em;
+    width: 1.5em;
+    fill: #19183b;
+    position: absolute;
+}
+
+.button-submit {
+    position: absolute;
+    top: 10px;
+    
+}
+
+.checkbox-tag {
+    margin-top: 2%;
+}
+
+.checkbox-tag input[type="checkbox"] {
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0.25rem;
+    background: transparent;
+    border-radius: 2px;
+    place-content: center;
+    cursor: pointer;
+    accent-color: #7BAD9F;
+}
+
+.checkbox-tag input[type="checkbox"]::after {
+    content: "\2714";
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    color: yellow;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.checkbox-tag div {
+    text-align: center;
+}
+
+
+.post-section {
+    margin: 2% 50px;
+    background-color: #C5D2CE;
+    border-radius: 30px;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+
+.post-section label {
+}
+
+.search-post {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.post-question {
+    font-size: 2.2em;
+    display: block;
+    margin: 30px 0 10px 0;
+    font-family: "Enriqueta", Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: #545E72;
+}
+
+
+.rating {
+    display: inline-block;
+    clear: both;
+    margin-left: 30px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    float: right;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.rating label:before {
+    content: "\2605";
+    font-size: 4.0em;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+    transition: color 0.3s;
+}
+
+.opinions textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border: 5px solid #7BAD9F;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.button-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin-left: 30px;
+}
+
+.favorite-game {
+    margin-left: 30px;
+}
+
+.favorite-button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.favorite-button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.favorite-button svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s;
+  fill: #666;
+}
+
+.favorite-button svg:hover {
+  transform: scale(1.1);
+}
+
+.favorite-button input:checked ~ svg{
+  fill: #E3474F;
+}
+
+.submitting {
+    text-align: center;
+}
+
+.submit-post {
+    height: 3.2em;
+    width: 10.2em;
+    margin-top: 20px;
+    font-size: 2.2em;
+    background-color: #7BAD9F;
+    border: 2px solid black;
+    border-radius: 60px;
+    font-family: "Enriqueta", Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: #c5d2ce;
+    font-weight: 900;
+}
+
+.submit-post:hover {
+    color: yellow;
+    align-items: center;
+
+}
+
+
+
+/* Profile */
+.profile-info {
+}
+
+.profile-info img {
+    padding-top: 1%;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-info h2, .profile-info h3 {
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-info h2 {
+    font-size: 5.0em;
+    font-weight: 900;
+    padding-bottom: 1%;
+    border-bottom: 5px solid black;
+}
+
+.profile-info h3 {
+    font-size: 4.0em;
+    font-weight: 900;
+}
+
+/* ==================================================================== */
+/* MEDIA QUERY FOR TABLET VIEWPORT */
+
+@media screen and (max-width: 768px){
+    .navigation {
+        z-index: 1;
+        position:fixed;
+        overflow: visible;
+    }
+
+    #navbar {
+        margin-top: 5%;
+        margin-right: 2%;
+        position: relative;
+        display: inline-block;
+        float: right;
+
+    }
+
+    .dropbtn{
+        color: white;
+        padding: 16px;
+        font-size: 1.5em;
+        border: none;
+        cursor: pointer;
+        background-color: #19183B;
+        display: block;
+    }
+
+    #navbar ul{
+        margin-top: 5%;
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #7BAD9F;
+        min-width: 160px;
+        padding-left: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        align-items: center;
+    }
+
+    #navbar li {
+        text-decoration: none;
+        display: block;
+        color: black;
+        width: auto;
+        padding: 2vh 17vh;
+        z-index: 2;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #navbar a:hover {
+        background-color: yellow;
+    }
+    
+    #navbar:hover ul {
+        display: block;
+    }
+
+    #navbar:hover .dropbtn {
+        background-color: #7BAD9F;
+    }
+
+
+    .owner {
+        font-size: 1.0em;
+        margin-left: 1%;
+    }
+
+    .contacts {
+        font-size: 1.5em;
+        margin-right: 5%;
+    }
+
+
+    .title-page {
+        font-size: 5.0em;
+    }
+
+    .title-week {
+        font-size: 5.0em;
+    }
+    
+    .highlight-week p {
+        font-size: 1.8em;
+    }
+
+    .title-day {
+        font-size: 5.0em;
+    }
+
+    .rating label:before {
+        font-size: 2.4em;
+    }
+
+    .submit-post {
+        width: 8.0em;
+        height: 2.0em;
+        font-size: 1.8em;
+    }
+
+    .post-question {
+        font-size: 1.8em;
+    }
+}
+
+/* ==================================================================== */
+/* MEDIA QUERY FOR DESKTOP VIEWPORT */
+@media screen and (max-width: 480px){
+
+    .navigation {
+        z-index: 1;
+        position:fixed;
+        overflow: visible;
+    }
+
+    #navbar {
+        margin-top: 5%;
+        margin-right: 2%;
+        position: relative;
+        display: inline-block;
+        float: right;
+
+    }
+
+    .dropbtn{
+        color: white;
+        padding: 16px;
+        font-size: 1.5em;
+        border: none;
+        cursor: pointer;
+        background-color: #19183B;
+        display: block;
+    }
+
+    #navbar ul{
+        margin-top: 5%;
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #7BAD9F;
+        min-width: 160px;
+        padding-left: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        align-items: center;
+    }
+
+    #navbar li {
+        text-decoration: none;
+        display: block;
+        color: black;
+        width: auto;
+        padding: 1vh 8.5vh;
+        z-index: 2;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #navbar a:hover {
+        background-color: yellow;
+    }
+    
+    #navbar:hover ul {
+        display: block;
+    }
+
+    #navbar:hover .dropbtn {
+        background-color: #7BAD9F;
+    }
+
+
+    .owner {
+        font-size: 0.8em;
+        margin-left: 1%;
+    }
+
+    .contacts {
+        font-size: 1.0em;
+        margin-right: 5%;
+    }
+
+    .title-page {
+        font-size: 3.0em;
+    }
+
+    .title-week {
+        font-size: 3.0em;
+    }
+
+    .highlight-week p {
+        font-size: 1.0em;
+    }
+
+    .title-month {
+        font-size: 3.0em;
+    }
+
+    .rating label:before {
+        font-size: 1.9em;
+    }
+
+    .submit-post {
+        width: 6.5em;
+        height: 1.5em;
+        font-size: 1.5em
+    }
+
+    .post-question {
+        font-size: 1.5em;
+    }
 }
