@@ -265,7 +265,6 @@ footer {
     padding: 50px 0;
 }
 
-
 /* Post Page */
 .search {
     align-items: center;
@@ -501,11 +500,7 @@ footer {
 
 }
 
-
-
 /* Profile */
-.profile-info {
-}
 
 .profile-info img {
     padding-top: 1%;
@@ -637,6 +632,19 @@ footer {
     .post-question {
         font-size: 1.8em;
     }
+
+    .profile-info img {
+        height: 30.0em;
+    }
+
+    .profile-info h2 {
+        font-size: 4.0em;
+    }
+
+    .profile-info h3 {
+        font-size: 3.0em;
+    }
+
 }
 
 /* ==================================================================== */
@@ -742,5 +750,17 @@ footer {
 
     .post-question {
         font-size: 1.5em;
+    }
+
+    .profile-info img {
+        height: 20.0em;
+    }
+
+    .profile-info h2 {
+        font-size: 3.0em;
+    }
+
+    .profile-info h3 {
+        font-size: 2.0em;
     }
 }
