@@ -1,3 +1,9 @@
+/*
+Name: Sangalang, Benedict G.
+Section: CS - 201
+
+Final Output: Website Output
+*/
 
 /* Desktop View */
 html {
@@ -130,6 +136,19 @@ footer {
     font-weight: 900;
 }
 
+.highlighted {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #7bad9f, 0 0 10px #7bad9f, 0 0 20px #7bad9f, 0 0 40px #7bad9f, 0 0 80px #7bad9f;
+    }
+    100% {
+        text-shadow: 0 0 10px #19183b, 0 0 20px #19183b, 0 0 40px #19183b, 0 0 80px #19183b, 0 0 160px #19183b;
+    }
+}
+
 .title-week {
     text-align: center;
     font-size: 100px;
@@ -137,9 +156,26 @@ footer {
 }
 
 .highlight-week {
-    margin-bottom: 10%;
+    margin: 0 5% 10% 5%;
+    background: linear-gradient(-45deg, #7bad9f, #545e72, #7bad9f, #19183b);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding: 2% 0 10% 0;
+    border-radius: 20px;
+    color: white;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .fig-highlight {
     position: relative;
@@ -186,6 +222,8 @@ footer {
     background-color: #7BAD9F;
     padding-bottom: 50px;
     padding-top: 100px;
+    margin: 0 5% 0 5%;
+    border-radius: 20px;
 }
 
 .title-day {
@@ -254,6 +292,9 @@ footer {
 .review-month {
     padding-bottom: 50px;
     padding-top: 100px;
+    margin: 5% 5% 0 5%;
+    border-radius: 20px;
+    background-color: #545e72;
 }
 
 .title-month {
@@ -368,11 +409,7 @@ footer {
     margin: 2% 50px;
     background-color: #C5D2CE;
     border-radius: 30px;
-    padding-bottom: 1%;
-    padding-left: 1%;
-}
-
-.post-section label {
+    padding: 1% 0 1% 1%;
 }
 
 .search-post {
